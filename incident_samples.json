@@ -1,0 +1,22 @@
+[
+  {
+    "incident_id": "INC-2401",
+    "service": "auth-api",
+    "symptom": "p95 latency above 1200ms",
+    "severity": "sev2",
+    "started_at": "2026-04-18T14:10:00Z",
+    "signals": ["latency_spike", "5xx_rate_3pct", "dependency_timeout"],
+    "suspected_dependency": "session-store",
+    "contract_failure": "token refresh response missing expires_at for 2.4% of calls"
+  },
+  {
+    "incident_id": "INC-2402",
+    "service": "billing-events",
+    "symptom": "consumer lag above threshold",
+    "severity": "sev3",
+    "started_at": "2026-04-19T09:45:00Z",
+    "signals": ["queue_lag", "schema_mismatch", "retry_storm"],
+    "suspected_dependency": "event-router",
+    "contract_failure": "amount field changed from number to string in one producer"
+  }
+]
