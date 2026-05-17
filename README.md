@@ -1,12 +1,23 @@
 # Platform / Infra Reliability Kit
 
+🌐 **Live demo:** _coming soon — deploys to Hugging Face Spaces in Wave 3 rollout_
+
 This artifact turns incident signals into a runbook draft and a service-boundary contract report. It is designed to be reused for platform, API, infrastructure, and reliability roles where clear operational thinking matters more than a large demo.
 
 ## Run
 
+**Interactive (Streamlit) — recommended:**
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+Pick a sample incident or build by signal selection. Generate. Three tabs (Runbook / Contract Report / Recommended Tests) with a streaming-text effect.
+
+**CLI batch run:**
 ```bash
 python3 runbook_generator.py
 ```
+Refreshes `sample_runbook.md` and `contract_report.md`.
 
 ## What It Demonstrates In 30 Seconds
 
